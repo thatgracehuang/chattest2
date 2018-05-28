@@ -91,7 +91,7 @@ $(function() {
       .text(data.message);
 
     var typingClass = data.typing ? 'typing' : '';
-    var $messageDiv = $('<li class="message"/>')
+    var $messageDiv = $('<span style="display: inline-block" class="message"/>')
       .data('username', data.username)
       .addClass(typingClass)
       .append($usernameDiv, $messageBodyDiv);
@@ -229,7 +229,7 @@ $(function() {
   socket.on('login', function (data) {
     connected = true;
     // Display the welcome message
-    var message = "Welcome to Socket.IO Chat – ";
+    var message = "Welcome to Cartography Chat – ";
     log(message, {
       prepend: true
     });
